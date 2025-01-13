@@ -1,5 +1,3 @@
-Sure! Below is an example of a `README.md` file for a repository named "penyewaan-hotel" on GitHub.
-
 ```markdown
 # Penyewaan Hotel
 
