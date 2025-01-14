@@ -41,24 +41,34 @@
   <thead>
     <tr>
       <th scope="col">No</th>
+      <th scope="col">Nama lengkap</th>
+      <th scope="col">Jenis kelamin</th>
       <th scope="col">Tipe kamar</th>
-      <th scope="col">Harga</th>
-      <th scope="col">Gambar</th>
+      <th scope="col">No identitas</th>
+      <th scope="col">Tanggal pesan</th>
+      <th scope="col">Durasi menginap</th>
+      <th scope="col">Diskon</th>
+      <th scope="col">Total bayar</th>
     </tr>
   </thead>
   <tbody class="table-group-divider mt-3">
   <?php 
             $no = 1;
-            $sql = "SELECT * FROM penyewaan";
+            $sql = "SELECT * FROM pemesanan";
 
             $query = mysqli_query($connect, $sql);
 
             while($data = mysqli_fetch_array($query)){
                 echo "<tr>";
                 echo "<td>".$no++."</td>";
-                echo "<td>".$data['jenis_kamar']."</td>";
-                echo "<td>".$data['harga']."</td>";
-                echo "<td><img src='./image/".$data['image']."' width='100' height='100' class='img-thumbnail'></td>";
+                echo "<td>".$data['nama']."</td>";
+                echo "<td>".$data['jenis_kelamin']."</td>";
+                echo "<td>".$data['id_kamar']."</td>";
+                echo "<td>".$data['no_identitas']."</td>";
+                echo "<td>".$data['tanggal_pesan']."</td>";
+                echo "<td>".$data['durasi_menginap']."</td>";
+                echo "<td>".$data['diskon']. "%</td>";
+                echo "<td>".$data['total']."</td>";
                 echo "</tr>";
             }
         ?>

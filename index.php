@@ -114,6 +114,12 @@
                                 </div>
                             </div>
 
+                            <!-- Add this before the total bayar field -->
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label fw-semibold" hidden>Diskon</label>
+                                <input type="text" class="form-control" id="diskon" aria-describedby="emailHelp" name="diskon" readonly hidden>
+                            </div>
+
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label fw-semibold">Total bayar</label>
                                 <input type="text" class="form-control" id="total" aria-describedby="emailHelp" name="total" readonly>
@@ -143,9 +149,11 @@
             $durasi = $_POST['durasi'];
             $total = $_POST['total'];
             $sarapan = $_POST['sarapan'];
-
-            $sql = "INSERT INTO pemesanan (nama, jenis_kelamin, no_identitas, id_kamar, tanggal_pesan, durasi_menginap, total, sarapan) VALUES ('$nama', '$jenis_kelamin', '$no_identitas', '$jenis_kamar', '$tanggal', '$durasi', '$total', '$sarapan')";
-
+            $diskon = ($durasi > 3) ? 10 : 0; // buat discount
+        
+            $sql = "INSERT INTO pemesanan (nama, jenis_kelamin, no_identitas, id_kamar, tanggal_pesan, durasi_menginap, total, sarapan, diskon) 
+                    VALUES ('$nama', '$jenis_kelamin', '$no_identitas', '$jenis_kamar', '$tanggal', '$durasi', '$total', '$sarapan', '$diskon')";
+        
             if($connect->query($sql)){
                 echo "<script>
                     Swal.fire({
@@ -161,6 +169,7 @@
                 </script>";
             }
         }
+        
     ?>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
