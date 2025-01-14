@@ -61,7 +61,7 @@
                 echo "<td>".$no++."</td>";
                 echo "<td>".$data['jenis_kamar']."</td>";
                 echo "<td><img src='./image/".$data['image']."' width='100' height='100' class='img-thumbnail'></td>";
-                echo "<td><img src='./image/".$data['image']."' width='100' height='100' class='img-thumbnail'></td>";
+                echo "<td><video width='200' height='100' controls autoplay><source src='./image/".$data['video']."' type='video/mp4'></video></td>";
                 echo "</tr>";
             }
         ?>
