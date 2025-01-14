@@ -22,13 +22,13 @@
                 <div class="collapse navbar-collapse mt-1" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="jenis-beasiswa.php">Jenis kamar</a>
+                        <a class="nav-link" aria-current="page" href="jenis-kamar.php">Jenis kamar</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Pesan kamar</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="hasil.php">Tentang kami</a>
+                        <a class="nav-link" aria-current="page" href="">Tentang kami</a>
                     </li>
                 </ul>
             </div>
@@ -155,7 +155,7 @@
                         confirmButtonColor: '#212529'
                     }).then((result) => {
                         if (result.isConfirmed) {
-                            window.location.href = 'index.php';
+                            window.location.href = 'data-penyewaan.php';
                         }
                     });
                 </script>";
