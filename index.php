@@ -28,7 +28,7 @@
                         <a class="nav-link active" aria-current="page" href="#">Pesan kamar</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="">Tentang kami</a>
+                        <a class="nav-link" aria-current="page" href="tentang-kami.php">Tentang kami</a>
                     </li>
                 </ul>
             </div>
@@ -99,7 +99,7 @@
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label fw-semibold">Tanggal pesan</label>
-                                <input type="date" class="form-control" id="tanggal" aria-describedby="emailHelp" name="tanggal">
+                                <input type="date" class="form-control" id="tanggal" aria-describedby="emailHelp" name="tanggal" required>
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label fw-semibold">Durasi menginap</label>
@@ -110,11 +110,10 @@
                             <div class="mb-3">
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" value="1" id="flexCheckDefault" name="sarapan">
-                                    <label class="form-check-label" for="flexCheckDefault">Sarapan</label>
+                                    <label class="form-check-label" for="flexCheckDefault">Sarapan (+Rp80.000)</label>
                                 </div>
                             </div>
 
-                            <!-- Add this before the total bayar field -->
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label fw-semibold" hidden>Diskon</label>
                                 <input type="text" class="form-control" id="diskon" aria-describedby="emailHelp" name="diskon" readonly hidden>

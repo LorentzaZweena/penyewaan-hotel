@@ -36,46 +36,51 @@
 
 <!-- hasil -->
 <div class="container mt-5">
-    <h1 class="mb-3">Data penyewaan</h1>
-<table class="table text-center border border-dark mt-">
-  <thead>
-    <tr>
-      <th scope="col">No</th>
-      <th scope="col">Nama lengkap</th>
-      <th scope="col">Jenis kelamin</th>
-      <th scope="col">Tipe kamar</th>
-      <th scope="col">No identitas</th>
-      <th scope="col">Tanggal pesan</th>
-      <th scope="col">Durasi menginap</th>
-      <th scope="col">Diskon</th>
-      <th scope="col">Total bayar</th>
-    </tr>
-  </thead>
-  <tbody class="table-group-divider mt-3">
-  <?php 
-            $no = 1;
-            $sql = "SELECT * FROM pemesanan";
+    <h1 class="mb-4">Data penyewaan</h1>
+    <div class="shadow-sm text-center">
+        <div class="card">
+            <div class="table-responsive">
+                <table class="table table-hover table-striped align-middle">
+                    <thead class="table-dark">
+                        <tr>
+                            <th scope="col" class="py-3">No</th>
+                            <th scope="col" class="py-3">Nama lengkap</th>
+                            <th scope="col" class="py-3">Jenis kelamin</th>
+                            <th scope="col" class="py-3">Tipe kamar</th>
+                            <th scope="col" class="py-3">No identitas</th>
+                            <th scope="col" class="py-3">Tanggal pesan</th>
+                            <th scope="col" class="py-3">Durasi menginap</th>
+                            <th scope="col" class="py-3">Diskon</th>
+                            <th scope="col" class="py-3">Total bayar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php 
+                        $no = 1;
+                        $sql = "SELECT pemesanan.*, kamar.jenis_kamar FROM pemesanan JOIN kamar ON pemesanan.id_kamar = kamar.id_tipe";
+                        $query = mysqli_query($connect, $sql);
 
-            $query = mysqli_query($connect, $sql);
-
-            while($data = mysqli_fetch_array($query)){
-                echo "<tr>";
-                echo "<td>".$no++."</td>";
-                echo "<td>".$data['nama']."</td>";
-                echo "<td>".$data['jenis_kelamin']."</td>";
-                echo "<td>".$data['id_kamar']."</td>";
-                echo "<td>".$data['no_identitas']."</td>";
-                echo "<td>".$data['tanggal_pesan']."</td>";
-                echo "<td>".$data['durasi_menginap']."</td>";
-                echo "<td>".$data['diskon']. "%</td>";
-                echo "<td>".$data['total']."</td>";
-                echo "</tr>";
-            }
-        ?>
-
-  </tbody>
-</table>
+                        while($data = mysqli_fetch_array($query)){
+                            echo "<tr>";
+                            echo "<td>".$no++."</td>";
+                            echo "<td>".$data['nama']."</td>";
+                            echo "<td>".$data['jenis_kelamin']."</td>";
+                            echo "<td>".$data['jenis_kamar']."</td>";
+                            echo "<td>".$data['no_identitas']."</td>";
+                            echo "<td>".$data['tanggal_pesan']."</td>";
+                            echo "<td>".$data['durasi_menginap']." malam</td>";
+                            echo "<td>".$data['diskon']."%</td>";
+                            echo "<td>".$data['total']."</td>";
+                            echo "</tr>";
+                        }
+                        ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
 </html>
