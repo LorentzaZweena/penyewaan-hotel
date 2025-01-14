@@ -21,13 +21,16 @@
                 <div class="collapse navbar-collapse mt-1" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="">Jenis kamar</a>
+                        <a class="nav-link active" aria-current="page" href="">Produk</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="harga.php">Harga</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="index.php">Pesan kamar</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="">Tentang kami</a>
+                        <a class="nav-link" aria-current="page" href="tentang-kami.php">Tentang kami</a>
                     </li>
                 </ul>
             </div>

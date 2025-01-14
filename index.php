@@ -22,7 +22,10 @@
                 <div class="collapse navbar-collapse mt-1" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="jenis-kamar.php">Jenis kamar</a>
+                        <a class="nav-link" aria-current="page" href="jenis-kamar.php">Produk</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="harga.php">Harga</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Pesan kamar</a>
@@ -76,9 +79,9 @@
                             </div>
 
                             <div class="mb-3">
-                                <label for="jenis_kamar" class="form-label fw-semibold">Jenis kamar</label>
+                                <label for="jenis_kamar" class="form-label fw-semibold">Produk</label>
                                 <select class="form-select" aria-label="Default select example" name="jenis_kamar" id="jenis_kamar" required>
-                                <option selected disabled value="">-- Pilih jenis kamar --</option>
+                                <option selected disabled value="">-- Pilih Produk --</option>
                                     <?php
                                         $sql = "SELECT * FROM kamar";
                                         $result = mysqli_query($connect, $sql);

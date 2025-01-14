@@ -21,7 +21,10 @@
                 <div class="collapse navbar-collapse mt-1" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="">Jenis kamar</a>
+                        <a class="nav-link active" aria-current="page" href="">Produk</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="harga.php">Harga</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="index.php">Pesan kamar</a>
@@ -42,8 +45,8 @@
     <tr>
       <th scope="col">No</th>
       <th scope="col">Tipe kamar</th>
-      <th scope="col">Harga</th>
       <th scope="col">Gambar</th>
+      <th scope="col">Video</th>
     </tr>
   </thead>
   <tbody class="table-group-divider mt-3">
@@ -57,7 +60,7 @@
                 echo "<tr>";
                 echo "<td>".$no++."</td>";
                 echo "<td>".$data['jenis_kamar']."</td>";
-                echo "<td>".$data['harga']."</td>";
+                echo "<td><img src='./image/".$data['image']."' width='100' height='100' class='img-thumbnail'></td>";
                 echo "<td><img src='./image/".$data['image']."' width='100' height='100' class='img-thumbnail'></td>";
                 echo "</tr>";
             }
