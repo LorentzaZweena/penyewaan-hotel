@@ -79,9 +79,9 @@
                             </div>
 
                             <div class="mb-3">
-                                <label for="jenis_kamar" class="form-label fw-semibold">Produk</label>
+                                <label for="jenis_kamar" class="form-label fw-semibold">Kamar</label>
                                 <select class="form-select" aria-label="Default select example" name="jenis_kamar" id="jenis_kamar" required>
-                                <option selected disabled value="">-- Pilih Produk --</option>
+                                <option selected disabled value="">-- Pilih kamar --</option>
                                     <?php
                                         $sql = "SELECT * FROM kamar";
                                         $result = mysqli_query($connect, $sql);
