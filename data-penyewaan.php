@@ -21,7 +21,7 @@
                 <div class="collapse navbar-collapse mt-1" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="">Produk</a>
+                        <a class="nav-link" aria-current="page" href="jenis-kamar.php">Produk</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="harga.php">Harga</a>
